@@ -13478,19 +13478,56 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As previously mentioned, there's 342 columns of data here, most of which are not relevant. The description of each column is provided in the 2019 BRFSS codebook (<a href="https://www.cdc.gov/brfss/annual_data/2019/pdf/codebook19_llcp-v2-508.HTML">link</a>). From here the columns that are of interest for this project can be found, and the DataFrame can be cut down to only those.</p>
-<p>The columns of interest are:
-| Column | Description |
-|---|---|
-| _STATE | State of resident |
-| INCOME2 | Annual household income from all sources (stratified into different categories) |
-| GENHLTH | "Would you say that in general your health is" |
-| _BMI5 | Body Mass Index (Calculated) |
-| EXERANY2 | Whether they have exercises in the past week or not |
-| <em>SEX | Calculated sex variable (accounts for gender identity) |
-| EDUCA | "What is the highest grade or year of school you completed?" |
-| PA2MIN</em> | Calculated amount physical activity per week (minutes) |
-| _FRUTSU1 | Calculated number of fruits consumed per day |
-| _VEGESU1 | Calculated number of vegetables consumed per day |</p>
+<p>The columns of interest are:</p>
+<table>
+<thead><tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_STATE</td>
+<td>State of resident</td>
+</tr>
+<tr>
+<td>INCOME2</td>
+<td>Annual household income from all sources (stratified into different categories)</td>
+</tr>
+<tr>
+<td>GENHLTH</td>
+<td>"Would you say that in general your health is"</td>
+</tr>
+<tr>
+<td>_BMI5</td>
+<td>Body Mass Index (Calculated)</td>
+</tr>
+<tr>
+<td>EXERANY2</td>
+<td>Whether they have exercises in the past week or not</td>
+</tr>
+<tr>
+<td>_SEX</td>
+<td>Calculated sex variable (accounts for gender identity)</td>
+</tr>
+<tr>
+<td>EDUCA</td>
+<td>"What is the highest grade or year of school you completed?"</td>
+</tr>
+<tr>
+<td>PA2MIN_</td>
+<td>Calculated amount physical activity per week (minutes)</td>
+</tr>
+<tr>
+<td>_FRUTSU1</td>
+<td>Calculated number of fruits consumed per day</td>
+</tr>
+<tr>
+<td>_VEGESU1</td>
+<td>Calculated number of vegetables consumed per day</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -14071,13 +14108,31 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Sometimes in data cleaning it can be useful to add a column based on another column. Here we are going to add a column that contains the weight classification based on bmi. This will be used later in the machine learning section. The different BMI to weight classifications is defined by the CDC <a href="https://www.cdc.gov/obesity/adult/defining.html">here</a>, and is as follows:</p>
-<p>The columns of interest are:
-| BMI | Weight Classification |
-|---|---|
-| bmi &lt; 18.5 | Underweight |
-| 18.5 ≤ bmi &lt; 25 | Healthy weight |
-| 25 ≤ bmi &lt; 30 | Overweight |
-| 30 ≤ bmi | Obese |</p>
+<table>
+<thead><tr>
+<th>BMI</th>
+<th>Weight Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bmi &lt; 18.5</td>
+<td>Underweight</td>
+</tr>
+<tr>
+<td>18.5 ≤ bmi &lt; 25</td>
+<td>Healthy weight</td>
+</tr>
+<tr>
+<td>25 ≤ bmi &lt; 30</td>
+<td>Overweight</td>
+</tr>
+<tr>
+<td>30 ≤ bmi</td>
+<td>Obese</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
